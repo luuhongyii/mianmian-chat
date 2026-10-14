@@ -1,19 +1,19 @@
-# 棉棉聊天
+# Mianmian Chat
 
-简单的可爱风网页版 chatbot，基于 [React ChatBotify](https://github.com/react-chatbotify/react-chatbotify)，接入 NVIDIA 云端模型，支持流式回复和当前对话上下文。
+A simple, cute web chatbot built with [React ChatBotify](https://github.com/react-chatbotify/react-chatbotify), powered by NVIDIA cloud models, with streaming replies and conversation context.
 
-## 运行
+## Running
 
-需要 Node.js 22.12+ 或 24+。
+Requires Node.js 22.12+ or 24+.
 
 ```powershell
 npm install
 npm run dev
 ```
 
-打开 http://127.0.0.1:5173。
+Open http://127.0.0.1:5173.
 
-本地 `.env` 的 `NVIDIA_ENV_FILE` 可指向已有密钥文件，也可以直接在 `.env` 中配置 `NVIDIA_API_KEY`。密钥仅由服务端读取，不打包到网页。`NVIDIA_MODEL` 默认为 `nvidia/nemotron-3.5-lightning-30b-a3b`，关闭思考模式。
+The `NVIDIA_ENV_FILE` setting in the local `.env` file can point to an existing credentials file, or you can set `NVIDIA_API_KEY` directly in `.env`. The key is read only by the server and is not bundled into the web app. `NVIDIA_MODEL` defaults to `nvidia/nemotron-3.5-lightning-30b-a3b`, with thinking mode disabled.
 
 ```powershell
 npm test
@@ -21,4 +21,4 @@ npm run build
 npm start
 ```
 
-聊天记录自动保存在当前浏览器。点击 History 可切换并继续之前的对话；刷新或重新打开同一地址可恢复记录，New chat 不会删除旧对话。记录不跨浏览器或设备同步，清除网站数据会删除记录。
+Chat history is saved automatically in the current browser. Click History to switch between conversations and continue previous chats. Refreshing or reopening the same URL restores your history, and New chat does not delete previous conversations. History does not sync across browsers or devices. Clearing site data deletes the saved history.
