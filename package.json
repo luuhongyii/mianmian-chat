@@ -1,0 +1,33 @@
+{
+  "name": "mianmian-chat",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server/index.mjs --production",
+    "preview": "node server/index.mjs --production",
+    "test": "vitest run",
+    "test:browser": "npm run build && node tests/browser.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-chatbotify": "2.5.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "16.3.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "jsdom": "26.1.0",
+    "playwright": "1.60.0",
+    "typescript": "5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "5.0.4"
+  }
+}
